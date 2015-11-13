@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.view.Window;
 
 import com.cjq.domain.Constant;
@@ -33,7 +32,6 @@ public class WelcomeActivity extends Activity {
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case Constant.MSG_SEND_INFO:
-                    Log.e(TAG,"=========handle");
                     startActivity(new Intent(context, LoginActivity.class));
                     finish();
                     break;
@@ -44,7 +42,6 @@ public class WelcomeActivity extends Activity {
     Thread t = new Thread(new Runnable() {
         @Override
         public void run() {
-            Log.e(TAG, "=========RUN");
             mhandle.sendEmptyMessageDelayed(Constant.MSG_SEND_INFO, 3000);
         }
     });
