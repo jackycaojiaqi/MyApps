@@ -23,9 +23,8 @@
         <LinearLayout
             android:id="@+id/linearLayout1"
             android:layout_width="fill_parent"
-            android:layout_height="60dp"
-            android:background="@color/white"
-            android:paddingBottom="5dip">
+            android:layout_height="53dp"
+            android:background="@color/white">
 
             <LinearLayout
                 android:id="@+id/lly_chat"
@@ -37,7 +36,7 @@
                 <ImageView
                     android:id="@+id/iv_main_talk"
                     android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:background="@drawable/ic_tab_msg_nor"
                     android:gravity="center" />
@@ -62,7 +61,7 @@
                 <ImageView
                     android:id="@+id/iv_main_msg"
                     android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:background="@drawable/ic_tab_more_nor"
                     android:gravity="center" />
@@ -89,7 +88,7 @@
                 <ImageView
                     android:id="@+id/iv_main_find"
                     android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:background="@drawable/ic_tab_parent_nor"
                     android:gravity="center" />
@@ -115,7 +114,7 @@
                 <ImageView
                     android:id="@+id/iv_main_setting"
                     android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:background="@drawable/ic_tab_qbb6_nor"
                     android:gravity="center" />

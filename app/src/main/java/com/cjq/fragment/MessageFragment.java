@@ -13,7 +13,7 @@ public class MessageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View mMainView = inflater
-                .inflate(R.layout.activity_welcome, container, false);
+                .inflate(R.layout.activity_contacts, container, false);
 
      return mMainView;
     }

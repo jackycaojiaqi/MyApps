@@ -4,24 +4,89 @@
     android:layout_height="match_parent"
     android:background="@color/colorbackground">
 
-   <LinearLayout
-       android:layout_width="fill_parent"
-       android:layout_height="wrap_content"
-       android:layout_margin="30dp"
-       android:orientation="vertical">
-       
-       <ImageView
-           android:id="@+id/iv_logo"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center_horizontal"
-           android:background="@drawable/ic_wing"/>
-   </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="60dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/ic_wing" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@drawable/ic_editext">
+
+            <EditText
+                android:id="@+id/et_user_name"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="30dp"
+                android:background="@null"
+                android:hint="username"
+                android:textColorHint="@color/background" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_login_user" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_editext">
+
+            <EditText
+                android:id="@+id/et_user_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:background="@null"
+                android:hint="password"
+                android:layout_marginLeft="30dp"
+                android:textColorHint="@color/background" />
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_login_pwd" />
+        </RelativeLayout>
+
+<Button
+    android:id="@+id/btn_login"
+    android:layout_width="70dp"
+    android:layout_height="50dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="20dp"
+    android:text="login"
+    android:textColor="@color/light_white"
+    android:background="@drawable/ic_login_entry"/>
+    </LinearLayout>
 
     <ImageView
         android:layout_width="200dp"
         android:layout_height="120dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/ic_login_house"/>
+        android:background="@drawable/ic_login_house" />
 </RelativeLayout>

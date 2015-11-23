@@ -8,7 +8,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.animation.Animation;
@@ -39,11 +38,8 @@ public class MainActivity extends FragmentActivity {
     private ImageView iv_main_chat, iv_main_msg, iv_main_find, iv_main_setting;
     private LinearLayout lly_chat, lly_msg, lly_find, lly_setting;
     private int currIndex = 0;
-    private int offset = 0;
-    private int position_one;
-    private int position_two;
-    private int position_three;
     private Resources resources;
+    private  String a ;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -76,9 +72,6 @@ public class MainActivity extends FragmentActivity {
     private void InitViewPager() {
         mPager = (ViewPager) findViewById(R.id.vPager);
         fragmentsList = new ArrayList<Fragment>();
-        LayoutInflater mInflater = getLayoutInflater();
-        View activityView = mInflater.inflate(R.layout.activity_login, null);
-
         Fragment activityfragment = ContactsFragment.newInstance("Hello Activity.");
         Fragment groupFragment = MessageFragment.newInstance("Hello Group.");
         Fragment friendsFragment = NewsFragment.newInstance("Hello Friends.");

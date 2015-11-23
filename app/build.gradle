@@ -22,5 +22,12 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
+    compile 'org.xutils:xutils:3.0.+'
     compile 'com.android.support:design:23.1.0'
+    compile files('libs/pinyin4j-2.5.0.jar')
+    compile 'com.squareup.retrofit:retrofit:1.7.1'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
+    compile 'com.squareup.okhttp:okhttp:2.0.0'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'javax.annotation:javax.annotation-api:1.2'
 }
