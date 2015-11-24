@@ -30,4 +30,6 @@ dependencies {
     compile 'com.squareup.okhttp:okhttp:2.0.0'
     compile 'com.google.code.gson:gson:2.4'
     compile 'javax.annotation:javax.annotation-api:1.2'
+    compile 'tyrantgit:explosionfield:1.0.1'
+    compile project(':library')
 }
