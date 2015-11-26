@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:circleprogress="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -28,7 +28,7 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <autolayout.AutoLinearLayout
         android:layout_width="fill_parent"
         android:layout_height="280dp"
         android:layout_marginLeft="50dp"
@@ -36,19 +36,26 @@
         android:layout_marginTop="220dp"
         android:orientation="vertical">
 
-        <RelativeLayout
+        <autolayout.AutoRelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:background="@drawable/ic_editext">
 
-            <EditText
-                android:id="@+id/et_user_name"
-                android:layout_width="fill_parent"
-                android:layout_height="45dp"
-                android:layout_marginLeft="30dp"
-                android:background="@null"
-                android:hint="username"
-                android:textColorHint="@color/background" />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_user_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@null"
+                    android:hint="username"
+                    android:textColorHint="@color/background" />
+            </android.support.design.widget.TextInputLayout>
 
             <ImageView
                 android:layout_width="30dp"
@@ -56,7 +63,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/ic_login_user" />
-        </RelativeLayout>
+        </autolayout.AutoRelativeLayout>
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -64,14 +71,19 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/ic_editext">
 
-            <EditText
-                android:id="@+id/et_user_pwd"
-                android:layout_width="fill_parent"
-                android:layout_height="45dp"
-                android:layout_marginLeft="30dp"
-                android:background="@null"
-                android:hint="password"
-                android:textColorHint="@color/background" />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_user_pwd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@null"
+                    android:hint="password"
+                    android:textColorHint="@color/background" />
+            </android.support.design.widget.TextInputLayout>
 
             <ImageView
                 android:layout_width="17dp"
@@ -118,7 +130,7 @@
             circleprogress:color1="@android:color/holo_red_light"
             circleprogress:color2="@android:color/holo_green_light"
             circleprogress:color3="@android:color/holo_blue_light" />
-    </LinearLayout>
+    </autolayout.AutoLinearLayout>
 
 
-</RelativeLayout>
+</autolayout.AutoRelativeLayout>

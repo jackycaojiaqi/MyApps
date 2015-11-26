@@ -16,7 +16,7 @@ private Context context;
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.activity_contacts, container,
+		View view = inflater.inflate(R.layout.activity_shop, container,
 				false);
 		context = getActivity();
 		return view;

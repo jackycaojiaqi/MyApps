@@ -5,4 +5,7 @@
         <attr name="color2" format="reference|color"/>
         <attr name="color3" format="reference|color"/>
     </declare-styleable>
+    <declare-styleable name="AutoLayout_Layout">
+        <attr name="layout_auto_textSizeBaseWidth" format="boolean"/>
+    </declare-styleable>
 </resources>

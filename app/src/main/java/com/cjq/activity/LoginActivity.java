@@ -2,6 +2,7 @@ package com.cjq.activity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
 import android.view.View;
@@ -13,6 +14,7 @@ import com.cjq.domain.IP;
 import com.example.administrator.library.CircleProgress;
 import com.example.administrator.myapp.R;
 
+import autolayout.AutoLayout;
 import tyrantgit.explosionfield.ExplosionField;
 
 public class LoginActivity extends Activity implements View.OnClickListener {
@@ -29,6 +31,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_login);
+        AutoLayout.getInstance().auto(this);
         context = this;
         mExplosionField = ExplosionField.attach2Window(this);
         initview();
@@ -71,6 +74,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                 case Constant.MSG_SEND_INFO:
                     reset(btn_entry);
                     reset(btn_register);
+                    startActivity(new Intent(context,MainActivity.class));
+                    finish();
                     break;
                 case Constant.MSG_SEND_INFO_CIRCLE:
                     mProgressView.stopAnim();
