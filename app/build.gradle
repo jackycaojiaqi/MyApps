@@ -17,12 +17,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets.main {
+        jniLibs.srcDirs = ['libs']  // <-- Set your folder here!
+    }
 }
-
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'org.xutils:xutils:3.0.+'
     compile 'com.android.support:design:23.1.0'
     compile files('libs/pinyin4j-2.5.0.jar')
     compile 'com.squareup.retrofit:retrofit:1.7.1'
@@ -32,4 +33,5 @@ dependencies {
     compile 'javax.annotation:javax.annotation-api:1.2'
     compile 'tyrantgit:explosionfield:1.0.1'
     compile project(':library')
+    compile files('libs/jpush-android-2.0.5.jar')
 }

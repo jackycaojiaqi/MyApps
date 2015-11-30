@@ -14,7 +14,6 @@ import com.cjq.domain.IP;
 import com.example.administrator.library.CircleProgress;
 import com.example.administrator.myapp.R;
 
-import autolayout.AutoLayout;
 import tyrantgit.explosionfield.ExplosionField;
 
 public class LoginActivity extends Activity implements View.OnClickListener {
@@ -31,7 +30,6 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_login);
-        AutoLayout.getInstance().auto(this);
         context = this;
         mExplosionField = ExplosionField.attach2Window(this);
         initview();
@@ -74,7 +72,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                 case Constant.MSG_SEND_INFO:
                     reset(btn_entry);
                     reset(btn_register);
-                    startActivity(new Intent(context,MainActivity.class));
+                    startActivity(new Intent(context, MainActivity.class));
                     finish();
                     break;
                 case Constant.MSG_SEND_INFO_CIRCLE:
@@ -84,4 +82,11 @@ public class LoginActivity extends Activity implements View.OnClickListener {
             super.handleMessage(msg);
         }
     };
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mhandle.removeCallbacksAndMessages(null);
+    }
+
 }
